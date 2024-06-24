@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Записывающее устройство</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="http://www.elzond.ru/" class="header__logo">
+      <img src="img/logo_elzond.png" alt="logo">
+  </a>
+    <h1>Встаиваемое устройство звукозаписи</h1>
+  </header>
+
+  <main>
+    <div class="settings">
+      <ul class="settings__module">
+          <li><label for="txtsdstat">SD-карта:</label> <input required type="text"></li>
+          <li><label for="txtsdstat">Файловая система:</label> <input required type="text"></li>
+      </ul>
+  </div>
+  <div class="control">
+      <h2 class="control__title">Управление записью</h2>
+      <div class="control__descr">
+          <label for="txtfsfree"> Свободно </label> 
+          <input id="txtfsfree" name="fsfree" type="text" disabled="disabled"/>
+          <label> ГБ из </label>
+          <label for="txtfstot"> </label> 
+          <input id="txtfstot" name="fstot" type="text" disabled="disabled"/>
+          <label> ГБ </label>
+      </div>
+  </div>
+      <button class="btn" id="record_btn">
+    <img src="img/microphone.png" alt="record" id="record_img">
+  </button>
+
+  <section>
+    <h2>Мои записи</h2>
+    <div id="records_box"></div>
+  </section>
+
+  <section id="record_box">
+    <h2>Мои записи</h2>
+
+    <div id="audio_box"></div>
+
+    <div class="action_box">
+      <button class="btn btn_success" id="save_btn">Сохранить</button>
+      <button class="btn btn_danger" id="remove_btn">Удалить</button>
+    </div>
+  </section>
+</main>
+
+  <footer>&copy;&nbsp;</footer>
+  <script src="script.js"></script>
+</body>
+</html>
